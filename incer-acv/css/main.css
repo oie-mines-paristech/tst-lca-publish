@@ -1,0 +1,158 @@
+:root {
+    --main-color : #43a047;
+  --primary: var(--main-color) !important;
+    --h1-color: var(--main-color) !important;
+    --h2-color: var(--main-color) !important;
+    --h3-color: var(--main-color) !important;
+    --form-element-spacing-horizontal: 0.2em !important;
+    --form-element-spacing-vertical: 0.2em !important;
+}
+
+h2 {
+    padding-top: 1em;
+    margin-top: 2em;
+    border-top: 2px solid gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+dt {
+    font-weight: bold;
+    margin-right: 1.5em;
+}
+
+ dl { display:block;
+      margin: 1em;}
+ dt { display:inline-block;
+      word-wrap:break-word;}
+ dd { margin-left:0;
+      display:inline;
+      vertical-align:top}
+ dd:after { content:'';display:block; }
+
+th {
+    font-weight: bold;
+}
+
+tr.separator {
+    border-top : 2px solid darkgray;
+}
+
+.icon-excel  {
+    display: inline-block;
+    background-image : url("../img/excel.svg")
+}
+
+.icon-comment  {
+    display: inline-block;
+    background-image : url("../img/excel.svg")
+}
+
+img[role=icon] {
+    height: 20px;
+    vertical-align: baseline;
+    display: inline;
+}
+
+.tooltip {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+.tooltip span {
+  visibility: hidden;
+  max-width: 50em;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.5em;
+  position: absolute;
+  z-index: 9;
+  top: -1em;
+  left:  100%;
+  margin-left:1em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.tooltip span::after {
+  content: "";
+  position: absolute;
+  top: 1.5em;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip input {
+  display:none;
+}
+.tooltip input:checked+span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.read-more-text {
+    display: none;
+}
+
+.expanded .read-more-text {
+    display: inline !important;
+}
+.expanded .read-more-button {
+    content: "less" !important;
+}
+
+.badge {
+    padding: 0.2em;
+    border-radius: 0.5em;
+    margin-right: 0.5em;
+}
+
+.deleted {
+    text-decoration: line-through;
+    background-color: #e7bcbc;
+}
+
+.added {
+    background-color: #c4ffc4;
+}
+
+section.inherited:not([data-show="show-all"]) .unchanged {
+    display:none;
+}
+
+
+
+aside {
+    padding:0.5em;
+    padding-top:2em;
+    position: fixed;
+    width:300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    line-height: 1em;
+    height:100%;
+    background-color: #eee;
+    display: none;
+}
+
+body.menu-shown aside {
+    display: block;
+}
+
+body.menu-shown main {
+    position: absolute;
+    left:350px;
+}
+
+
+.show-menu-button {
+    position: absolute;
+}
+
+aside ul {
+    padding-left: 0.5em;
+}
